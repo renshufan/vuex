@@ -1,7 +1,7 @@
 <template>
     <div>
       <div>{{userLoginInfo}}</div>
-      <div>{{position}}</div>
+      <div>站點名稱{{position}}</div>
       <div>{{siteId}}</div>
       <div>{{siteName}}</div>
       <div>{{account}}</div>
