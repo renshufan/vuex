@@ -2,7 +2,7 @@
     <div>
       <div>{{userLoginInfo}}</div>
 <<<<<<< HEAD
-      <div>站點名稱{{position}}</div>
+      <div>站點名稱1{{position}}</div>
 =======
       <div>{{position}}</div>
 >>>>>>> fd985e3b6ccf19b03abeb74a653d7312dc49a9b3
