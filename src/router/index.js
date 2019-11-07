@@ -2,10 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import card from '@/components/card'
-<<<<<<< HEAD
-import store from "@/store";
-=======
->>>>>>> fd985e3b6ccf19b03abeb74a653d7312dc49a9b3
+import store from "@/store"
 
 Vue.use(Router)
 
