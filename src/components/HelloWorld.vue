@@ -44,8 +44,12 @@ export default {
         'ACCOUNT',
         'SITE_NAME',
       ]),
+    ...mapActions([
+      'Acount'
+    ]),
       first(){
-        this.$store.dispatch('Acount',{n:100});
+        this.Acount({n: 100})
+        // this.$store.dispatch('Acount',{n:100});
       },
     },
 }

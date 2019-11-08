@@ -15,7 +15,7 @@ export default {
         var flag;
         flag = playout?true:false;
         if(flag){
-          state.count = state.count +  parseInt(playout.n);
+          state.count = state.count +  Number(playout.n);
         }else return;
     },
     // 异步执行，通过devtoo日志捕捉不到state状态变化
@@ -24,16 +24,16 @@ export default {
       flag = playout?true:false;
       if(flag){
         setTimeout(()=>{
-          state.count = state.count +  parseInt(playout.n);
+          state.count = state.count +  Number(playout.n);
         },500)
       }else return;
     }
   },
   actions: {
-    Acount ({commit}) {
+    Acount ({commit}, data) {
       commit({
-        type:'Count',
-        n:1
+        type: 'Count',
+        n: data
       })
       // setTimeout(() => {
       //   commit({

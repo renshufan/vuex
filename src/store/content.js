@@ -44,8 +44,8 @@ export default {
     },
   },
   actions: {
-    Acount (context) {
-      context.commit('Count')
+    Acount ({ state, commit }, data) {
+      commit('Count', data)
     }
   },
   getters:{
