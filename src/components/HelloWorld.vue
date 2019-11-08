@@ -48,7 +48,7 @@ export default {
       'Acount'
     ]),
       first(){
-        this.Acount({n: 100})
+        this.Acount({n: 0})
         // this.$store.dispatch('Acount',{n:100});
       },
     },
