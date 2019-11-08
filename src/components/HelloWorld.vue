@@ -9,10 +9,10 @@
       <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
     </div>
     <div>
-      <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)4</a>
+      <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)5</a>
     </div>
     <div>
-      <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示3</a>
+      <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示4</a>
     </div>
   </div>
 </template>
