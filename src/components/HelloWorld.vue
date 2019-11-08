@@ -12,7 +12,7 @@
       <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)</a>
     </div>
     <div>
-      <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示2</a>
+      <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示3</a>
     </div>
   </div>
 </template>
