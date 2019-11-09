@@ -27,10 +27,16 @@
             "account"
           ])
         },
+        created () {
+          this.vantSumbit()
+        },
         methods:{
           ...mapActions([
             'Acount'
           ]),
+          vantSumbit () {
+            console.log(this.userLoginInfo)
+          }
         }
     }
 </script>
