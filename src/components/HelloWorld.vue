@@ -18,46 +18,48 @@
 </template>
 
 <script>
-  import {mapState, mapMutations, mapGetters, mapActions} from 'vuex'
+import { mapState, mapMutations, mapGetters, mapActions } from "vuex"
 
 export default {
-  name: 'HelloWorld',
-  data () {
+  data() {
     return {
-      msg: 'Welcome to Your Vue.js App',
+      msg: "Welcome to Your Vue.js App"
     }
   },
-  mounted(){
-    this.$nextTick(()=>{
-      this.$store.commit('USER_LOGIN_INFO');
-      this.$store.commit('POSITION');
-      this.$store.commit('SITE_ID');
-      this.$store.commit('ACCOUNT');
-      this.$store.commit('SITE_NAME');
+  mounted() {
+    this.$nextTick(() => {
+      this.$store.commit("USER_LOGIN_INFO")
+      this.$store.commit("POSITION")
+      this.$store.commit("SITE_ID")
+      this.$store.commit("ACCOUNT")
+      this.$store.commit("SITE_NAME")
     })
   },
-  methods:{
-      ...mapMutations([
-        'USER_LOGIN_INFO',
-        'POSITION',
-        'SITE_ID',
-        'ACCOUNT',
-        'SITE_NAME',
-      ]),
-    ...mapActions([
-      'Acount'
+  methods: {
+    ...mapMutations([
+      "USER_LOGIN_INFO",
+      "POSITION",
+      "SITE_ID",
+      "ACCOUNT",
+      "SITE_NAME"
     ]),
-      first(){
-        this.Acount({n: 0})
-        // this.$store.dispatch('Acount',{n:100});
-      },
-    },
+    ...mapActions(["Acount"]),
+    first () {
+      this.Acount({ n: 0 })
+      this.$request.post('少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所', req)
+      .then(res => {
+        console.log(123)
+      })
+      // this.$store.dispatch('Acount',{n:100})
+    }
+  }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
