@@ -6,12 +6,12 @@
     <div>{{siteId}}</div>
     <div>{{siteName}}</div>
     <div>{{account}}</div>
-    <a href="javascript:;" @click="$router.push('/')">点击跳转首页0</a>
+    <a href="javascript:;" @click="$router.push('/')">点击跳转首页1</a>
   </div>
 </template>
 
 <script>
-import { mapState, mapMutations, mapGetters, mapActions } from "vuex";
+import { mapState, mapMutations, mapGetters, mapActions } from "vuex"
 
 export default {
   name: "card",
@@ -30,7 +30,6 @@ export default {
   methods: {
     ...mapActions(["Acount"]),
     vantSubmit() {
-      console.log(123)
     }
   }
 }
