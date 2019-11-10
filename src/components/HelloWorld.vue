@@ -13,6 +13,7 @@
     </div>
     <div>
       <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示4</a>
+      人生何处不相逢
     </div>
   </div>
 </template>
