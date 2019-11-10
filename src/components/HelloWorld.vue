@@ -9,7 +9,7 @@
       <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
     </div>
     <div>
-      <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)51112</a>
+      <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)</a>
     </div>
     <div>
       <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示4</a>
@@ -35,7 +35,7 @@ export default {
       this.$store.commit("SITE_NAME")
     })
   },
-  methods: {
+  methods: { 
     ...mapMutations([
       "USER_LOGIN_INFO",
       "POSITION",
@@ -46,10 +46,6 @@ export default {
     ...mapActions(["Acount"]),
     first () {
       this.Acount({ n: 0 })
-      this.$request.post('少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所', req)
-      .then(res => {
-        console.log(123)
-      })
       // this.$store.dispatch('Acount',{n:100})
     }
   }
