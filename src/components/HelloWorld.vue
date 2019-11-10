@@ -3,13 +3,13 @@
     <h1>{{ $store.state.Heade.count }}</h1>
     <h1>{{ $store.state.Content.cont }}</h1>
     <div>
-      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)</a>
+      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)321</a>
     </div>
     <div>
       <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
     </div>
-    <div> 
-      <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)</a>
+    <div>
+      <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)51112</a>
     </div>
     <div>
       <a href="javascript:;" @click="$router.push('/card')">跳转card组件,进行展示4</a>
@@ -35,7 +35,7 @@ export default {
       this.$store.commit("SITE_NAME")
     })
   },
-  methods: { 
+  methods: {
     ...mapMutations([
       "USER_LOGIN_INFO",
       "POSITION",
@@ -46,6 +46,7 @@ export default {
     ...mapActions(["Acount"]),
     first () {
       this.Acount({ n: 1 })
+      console.log(213)
       // this.$store.dispatch('Acount',{n:100})
     }
   }
