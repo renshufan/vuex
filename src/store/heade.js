@@ -31,10 +31,7 @@ export default {
   },
   actions: {
     Acount ({commit}, data) {
-      commit({
-        type: 'Count',
-        n: data
-      })
+      commit('Count', data)
       // setTimeout(() => {
       //   commit({
       //     type:'Count',

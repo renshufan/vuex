@@ -3,7 +3,7 @@
     <h1>{{ $store.state.Heade.count }}</h1>
     <h1>{{ $store.state.Content.cont }}</h1>
     <div>
-      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)</a>
+      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)321</a>
     </div>
     <div>
       <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
@@ -46,11 +46,8 @@ export default {
     ]),
     ...mapActions(["Acount"]),
     first () {
-      this.Acount({ n: 0 })
-      this.$request.post('少时诵诗书所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所所', req)
-      .then(res => {
-        console.log(123)
-      })
+      this.Acount({ n: 1 })
+      console.log(213)
       // this.$store.dispatch('Acount',{n:100})
     }
   }
