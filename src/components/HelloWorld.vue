@@ -3,7 +3,7 @@
     <h1>{{ $store.state.Heade.count }}</h1>
     <h1>{{ $store.state.Content.cont }}</h1>
     <div>
-      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)321</a>
+      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)3212</a>
     </div>
     <div>
       <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
