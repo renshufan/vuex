@@ -8,7 +8,7 @@
     <div>
       <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
     </div>
-    <div>
+    <div> 
       <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)</a>
     </div>
     <div>
@@ -45,7 +45,7 @@ export default {
     ]),
     ...mapActions(["Acount"]),
     first () {
-      this.Acount({ n: 0 })
+      this.Acount({ n: 1 })
       // this.$store.dispatch('Acount',{n:100})
     }
   }

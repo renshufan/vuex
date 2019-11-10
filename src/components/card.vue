@@ -28,7 +28,10 @@ export default {
     ])
   },
   methods: {
-    ...mapActions(["Acount"])
+    ...mapActions(["Acount"]),
+    vantSubmit() {
+      console.log(123)
+    }
   }
 }
 </script>
