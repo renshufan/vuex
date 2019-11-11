@@ -6,7 +6,7 @@
     <div>{{siteId}}</div>
     <div>{{siteName}}</div>
     <div>{{account}}</div>
-    <a href="javascript:;" @click="$router.push('/')">点击跳转首页000</a>
+    <a href="javascript:;" @click="$router.push('/')">点击跳转首页2222</a>
   </div>
 </template>
 
