@@ -1,1 +1,1 @@
-console(999)
+console.log(999)
