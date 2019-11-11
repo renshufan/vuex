@@ -1,2 +1,2 @@
 vue.config.js merge=ours
-src\App.vue merge=ours
+src\App.vue merge=oursvue.config.js merge=ours
