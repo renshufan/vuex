@@ -6,7 +6,7 @@
     <div>{{siteId}}</div>
     <div>{{siteName}}</div>
     <div>{{account}}</div>
-    <a href="javascript:;" @click="$router.push('/')">2222</a>
+    <a href="javascript:;" @click="$router.push('/')">0000</a>
   </div>
 </template>
 
