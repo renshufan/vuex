@@ -1,2 +1,3 @@
 vue.config.js merge=ours
 src\components\HelloWorld.vue merge=ours
+src\components\card.vue merge=ours
