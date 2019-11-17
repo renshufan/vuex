@@ -1,11 +1,13 @@
 <template>
   <div>
-    <div>{{userLoginInfo}}</div>
-    <div>站点:{{position}}</div>
-    <div>{{position}}</div>
-    <div>{{siteId}}</div>
-    <div>{{siteName}}</div>
-    <div>{{account}}</div>
+    <div>{{ userLoginInfo }}</div>
+    <div>站点:{{ position }}</div>
+    <div>{{ position }}</div>
+    <div>
+      {{ siteId }}
+    </div>
+    <div>{{ siteName }}</div>
+    <div>{{ account }}</div>
     <a href="javascript:;" @click="$router.push('/')">0000</a>
   </div>
 </template>
@@ -24,16 +26,19 @@ export default {
       "position",
       "siteId",
       "siteName",
+      "account",
+      "userLoginInfo",
+      "position",
+      "siteId",
+      "siteName",
       "account"
     ])
   },
   methods: {
     ...mapActions(["Acount"]),
-    vantSubmit() {
-    }
+    vantSubmit() {}
   }
 }
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
