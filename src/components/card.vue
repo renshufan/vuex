@@ -8,7 +8,7 @@
     </div>
     <div>{{ siteName }}</div>
     <div>{{ account }}</div>
-    <a href="javascript:;" @click="$router.push('/')">0000</a>
+    <a href="javascript:;" @click="$router.push('/')">card</a>
   </div>
 </template>
 
