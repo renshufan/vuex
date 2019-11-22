@@ -1,2 +1,2 @@
-# vue.config.js merge=ours
-src/App.vue merge=ours
+vue.config.js merge=ours
+src/components/card.vue merge=ours

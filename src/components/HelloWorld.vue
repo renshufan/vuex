@@ -36,15 +36,9 @@ export default {
     })
   },
   methods: {
-    ...mapMutations([
-      "USER_LOGIN_INFO",
-      "POSITION",
-      "SITE_ID",
-      "ACCOUNT",
-      "SITE_NAME"
-    ]),
+    ...mapMutations(["USER_LOGIN_INFO", "POSITION", "SITE_ID", "ACCOUNT", "SITE_NAME"]),
     ...mapActions(["Acount"]),
-    first () {
+    first() {
       this.Acount({ n: 1 })
       console.log(213)
       // this.$store.dispatch('Acount',{n:100})
