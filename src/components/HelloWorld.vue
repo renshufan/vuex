@@ -3,10 +3,10 @@
     <h1>{{ $store.state.Heade.count }}</h1>
     <h1>{{ $store.state.Content.cont }}</h1>
     <div>
-      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)1</a>
+      <a href="javascript:;" @click="$store.commit('Count',{n:1})">click mutations突变(同步)</a>
     </div>
     <div>
-      <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)1</a>
+      <a href="javascript:;" @click="$store.dispatch('Acount',{n:1})">click actions动作(异步)</a>
     </div>
     <div>
       <a href="javascript:;" @click="first">通过methods方法执行 actions动作(异步)</a>
