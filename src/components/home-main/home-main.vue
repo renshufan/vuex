@@ -43,7 +43,7 @@
     },
     computed: {
       ...mapGetters(['router'])
-    }
+    },
   };
 </script>
 <style lang="less" scoped>

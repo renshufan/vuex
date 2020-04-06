@@ -5,6 +5,7 @@ export default [
     path: "/fruit",
     name: "fruit",
     component: homeMain,
+    redirect: '/fruit/banana',
     meta: {
       title: '水果种类',
       keepAlive: true
