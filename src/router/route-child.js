@@ -1,4 +1,6 @@
 import homeMain from "@/components/home-main/home-main";
+// 在二级菜单栏下的路由component设置 ParentView 显示三级菜单栏
+import ParentView from '@/components/home-main/parent-view'
 
 export default [
   {
@@ -14,11 +16,22 @@ export default [
       {
         path: "banana",
         name: "banana",
-        component: () => import('@/view/fruit/banana/banana.vue'),
+        component: ParentView,
         meta: {
           title: '香蕉',
           keepAlive: true
-        }
+        },
+        children: [
+          {
+            path: "banana1",
+            name: "banana1",
+            component: () => import('@/view/fruit/banana/banana.vue'),
+            meta: {
+              title: '香蕉1',
+              keepAlive: true
+            }
+          }
+        ]
       }
     ]
   },
