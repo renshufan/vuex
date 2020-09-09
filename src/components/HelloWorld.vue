@@ -9,6 +9,7 @@
     <!--    </el-breadcrumb>-->
     <h1>{{ $store.state.Heade.count }}</h1>
     <h1>{{ $store.state.Content.cont }}</h1>
+    <div slot="renshufan">444</div>
     <div>
       <a href="javascript:;" @click="$store.commit('Count', { n: 1 })"
         >click mutations突变(同步)11111</a
@@ -29,78 +30,78 @@
       <a href="javascript:;" @click="card">跳转card组件,进行展示4</a>
     </div>
     <div class="name">
-      <card></card>
+      <!-- <card></card> -->
+      <slot name="renshufan">123</slot>
     </div>
     <router-view></router-view>
   </div>
 </template>
-
 <script>
-import { mapState, mapMutations, mapGetters, mapActions } from "vuex";
+import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
 
 var book = {
   _year: 2004,
   edition: 1
-};
-Object.defineProperty(book, "year", {
-  get() {
-    return this._year;
-  },
-  set(newValue) {
-    if (newValue > 2004) {
-      this._year = newValue;
-      this.edition += newValue - 2004;
-    }
-  }
-});
+}
+// Object.defineProperty(book, 'year', {
+//   get() {
+//     return this._year
+//   },
+//   set(newValue) {
+//     if (newValue > 2004) {
+//       this._year = newValue
+//       this.edition += newValue - 2004
+//     }
+//   }
+// })
 export default {
   data() {
     return {
-      msg: "Welcome to Your Vue.js App",
+      msg: 'Welcome to Your Vue.js App',
       arr: [],
       age: {
         food: 10,
         year: 20,
         toString() {
           //重写此对象的 toString方法
-          return this.food;
+          return this.food
         }
       }
-    };
+    }
   },
   mounted() {
     this.$nextTick(() => {
-      this.$store.commit("USER_LOGIN_INFO");
-      this.$store.commit("POSITION");
-      this.$store.commit("SITE_ID");
-      this.$store.commit("ACCOUNT");
-      this.$store.commit("SITE_NAME");
-    });
+      this.$store.commit('USER_LOGIN_INFO')
+      this.$store.commit('POSITION')
+      this.$store.commit('SITE_ID')
+      this.$store.commit('ACCOUNT')
+      this.$store.commit('SITE_NAME')
+    })
   },
   activated() {
-    alert(this.msg);
+    alert(this.msg)
   },
   methods: {
     ...mapMutations([
-      "USER_LOGIN_INFO",
-      "POSITION",
-      "SITE_ID",
-      "ACCOUNT",
-      "SITE_NAME"
+      'USER_LOGIN_INFO',
+      'POSITION',
+      'SITE_ID',
+      'ACCOUNT',
+      'SITE_NAME'
     ]),
-    ...mapActions(["Acount"]),
+    ...mapActions(['Acount']),
     card() {
-      this.msg = "3333";
-      this.$router.push({ name: "card", params: { name: 1 } });
+      this.msg = '3333'
+      this.$router.push({ name: 'card', params: { name: 1 } })
     },
     first() {
-      this.Acount({ n: 1 });
-      this.arr = ["111", "222"];
-      console.log(Object.keys(this.age));
+      this.Acount({ n: 1 })
+      this.arr = ['111', '222']
+      console.log(Object.keys(this.age), 123)
       // console.log(this.age.toString())
-      // book.year = 2005
+      book.year = 2005
       // alert(book.edition)
-      // console.log(this.age.valueOf(), this.age.toString())
+      // console.log(book, this.age.valueOf(), t////////his.age.toString())
       // this.$store.dispatch('Acount',{n:100})
       // let a = /[0-9]/g;
       // console.log(a instanceof RegExp)
@@ -110,7 +111,7 @@ export default {
   destroyed() {
     // alert('销毁完成')
   }
-};
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
