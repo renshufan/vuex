@@ -14,7 +14,7 @@ export default [
     },
     children: [
       {
-        path: "banana",
+        path: "/banana",
         name: "banana",
         component: ParentView,
         meta: {
@@ -23,7 +23,7 @@ export default [
         },
         children: [
           {
-            path: "banana1",
+            path: "/banana1",
             name: "banana1",
             component: () => import('@/view/fruit/banana/banana.vue'),
             meta: {
@@ -45,7 +45,7 @@ export default [
     },
     children: [
       {
-        path: "carrot",
+        path: "/carrot",
         name: "carrot",
         component: () => import('@/view/vegetable/carrot/carrot.vue'),
         meta: {
@@ -54,5 +54,15 @@ export default [
         }
       }
     ]
+  },
+  {
+    path: "/ball",
+    name: "ball",
+    redirect: "/carrot",
+    component: () => homeMain,
+    meta: {
+      title: '足球',
+      keepAlive: true
+    },
   }
 ]

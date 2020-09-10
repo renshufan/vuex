@@ -3,38 +3,8 @@
     <el-container>
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
         <el-menu :default-openeds="[]" unique-opened router>
-          <el-submenu :index="first.path" v-for="(first, i) in router">
-            <template slot="title"
-              ><i class="el-icon-message"></i>{{ first.meta.title }}</template
-            >
-
-            <el-menu-item
-              :index="first.path + '/' + second.path"
-              v-if="!second.children"
-              v-for="(second, i) in first.children"
-              >
-              <span >{{ second.meta.title }}</span>
-              </el-menu-item
-            >
-
-            <el-submenu
-              :index="second.path"
-              v-if="second.children"
-              v-for="(second, i) in first.children"
-            >
-                <template slot="title"
-                  ><i class="el-icon-message"></i
-                  >{{ second.meta.title }}</template
-                >
-                <div v-if="second.children">
-                  <el-menu-item
-                    :index="first.path + '/'+ second.path + '/' + third.path"
-                    v-for="(third, j) in second.children"
-                    >{{ third.meta.title }}</el-menu-item
-                  >
-                </div>
-            </el-submenu>
-          </el-submenu>
+          <!-- 左侧菜单栏 -->
+          <sideTabBar v-for="(item, index) in router" :key="index" :row="item"></sideTabBar>
         </el-menu>
       </el-aside>
       <el-container>
@@ -49,7 +19,7 @@
           </el-dropdown>
           <span>王小虎</span>
         </el-header>
-        <el-footer> </el-footer>
+        <el-footer></el-footer>
         <el-main>
           <router-view />
         </el-main>
@@ -59,19 +29,22 @@
 </template>
 
 <script>
-import { mapState, mapMutations, mapGetters, mapActions } from 'vuex'
-
+import { mapState, mapMutations, mapGetters, mapActions } from "vuex";
+import sideTabBar from "./sideTabBar";
 export default {
-  name: 'home-main',
+  name: "home-main",
   data() {
     return {
       // tableData: Array(20).fill(item)
-    }
+    };
+  },
+  components: {
+    sideTabBar
   },
   computed: {
-    ...mapGetters(['router'])
+    ...mapGetters(["router"])
   }
-}
+};
 </script>
 <style lang="less" scoped>
 .page {
@@ -81,17 +54,6 @@ export default {
     height: 100%;
   }
   .el-menu {
-    height: 100%;
-  }
-
-  .el-header {
-    background-color: #b3c0d1;
-    color: #333;
-    line-height: 60px;
-  }
-
-  .el-aside {
-    color: #333;
   }
 }
 </style>
