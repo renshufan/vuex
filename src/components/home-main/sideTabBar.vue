@@ -7,7 +7,7 @@
 
     <!-- 存在子路由数组 -->
     <template v-else>
-      <el-submenu :index="row.path" v-for="(first, i) in row.children" :key="i">
+      <el-submenu :index="row.path">
         <template slot="title">
           <i class="el-icon-message"></i>
           {{ row.meta.title }}
