@@ -2,7 +2,7 @@
   <div class="page">
     <el-container>
       <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
-        <el-menu :default-openeds="[]" unique-opened router>
+        <el-menu :default-active="$route.path" router>
           <!-- 左侧菜单栏 -->
           <sideTabBar v-for="(item, index) in router" :key="index" :row="item"></sideTabBar>
         </el-menu>
