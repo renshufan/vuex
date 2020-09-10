@@ -8,6 +8,7 @@
     "build": "node build/build.js",
     "lint": "vue-cli-service lint",
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "test": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --mode test",
     "start": "npm run dev"
   },
   "dependencies": {
